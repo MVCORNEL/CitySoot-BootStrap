@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="en">
+    <meta charset="utf-8" />
+    <title>CityScoot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="src/css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
+        <!--LOGO-->
+        <a class="navbar-brand fw-bolder" href="#">
+          <img src="src/img/city-scoot-logo.png" alt="" width="30" height="30" class="d-inline-block align-text-center mb-1" />
+          CityScoot
+        </a>
+
+        <!--HAMBURGER-->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--LINKS-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <!--1-->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!--2-->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="safety.html">Safety</a>
+            </li>
+            <!--3-->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="routes.html">Routes</a></li>
+                <li><a class="dropdown-item" href="guides.html">Guides</a></li>
+                <li><a class="dropdown-item active" href="#">Scooters</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a class="btn btn-outline-secondary fw-bolder" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Inspired from https://getbootstrap.com/docs/5.1/components/breadcrumb//-->
+    <section class="container" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Scooters</li>
+      </ol>
+    </section>
+
+    <!--HEADER inspired from https://getbootstrap.com/docs/5.1/examples/heroes/-->
+    <header class="container px-4 py-3 py-md-5">
+      <div class="row flex-lg-row-reverse align-items-center">
+        <!--IMG-->
+        <div class="col-12 col-lg-6">
+          <img src="src/img/scooters.jpg" alt="girls riding scooters img" class="d-block mx-auto img-fluid" width="500" height="300" />
+        </div>
+        <!--TEXT-->
+        <div class="col-lg-6">
+          <h1 class="display-1 lh-1 mb-4 mt-3">Scooters</h1>
+          <p class="lead">With a top speed of 25 km/h and a range of 40 km, the Blast electric scooters are the perfect urban mobility solution for getting around a modern city like London.</p>
+          <p class="lead d-none d-md-block">Scooters are lightweight and can easily be folded and carried.</p>
+          <p class="lead d-none d-md-block">They can also be switched to traditional foot mode, if the battery is empty.</p>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <a class="btn fs-3 bg-primary text-white px-4 text-start" role="button" href="#extra" data-bs-toggle="collapse" aria-expanded="false" aria-controls="extra">Read more >></a>
+
+        <div class="collapse card" id="extra">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item fs-5">GPS/GPRS devices and anti-theft systems.</li>
+              <li class="list-group-item fs-5">Fairlight anti-slip brakes</li>
+              <li class="list-group-item fs-5">High capacity 60V batteries with a typical four-hour charge life</li>
+              <li class="list-group-item fs-5">Height adjustable handlebars.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
+    <footer class="container py-4 pt-5 mt-auto">
+      <hr class="row mb-4" />
+      <div class="row align-item-end">
+        <span class="col-sm-11 col-md-4 nav-link text-muted">&copy; 2022 CityScoot, Inc </span>
+
+        <div class="col-sm-1 col-md-4 py-1">
+          <img src="src/img/city-scoot-logo.png" alt="logo scooter" width="30" height="30" class="ms-sm-0 mx-md-auto d-block" />
+        </div>
+
+        <div class="col-sm-12 col-md-4 d-flex flex-column flex-sm-row">
+          <a href="#" class="nav-link text-muted ps-0">Accessibility </a>
+          <a href="#" class="nav-link text-muted ps-0">Privacy</a>
+          <a href="#" class="nav-link text-muted ps-0">Corporate</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

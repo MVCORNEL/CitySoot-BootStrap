@@ -1,0 +1,47 @@
+//User define variables
+$color-primary: #27ae60;
+$color-primary-light: #ccffcc;
+$color-white: #fff;
+$custom-font: "Ubuntu", sans-serif;
+$primary: $color-primary;
+$light: $color-primary-light;
+//increase the brand font size
+$navbar-brand-font-size: 2.2rem;
+//font family
+$font-family-sans-serif: $custom-font;
+// Modified version of https://getbootstrap.com/docs/5.1/content/typography/#headings
+$display-font-sizes: (
+  1: 4.25rem,
+  2: 3.5rem,
+  3: 3rem,
+  4: 2.7rem,
+  5: 2.5rem,
+  6: 2.3rem,
+);
+$display-font-weight: 500;
+//NAVBAR
+
+//Modified version of https://getbootstrap.com/docs/5.1/utilities/spacing/#sass
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.45,
+  2: $spacer * 0.75,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+//NAVBAR
+$navbar-light-active-color: rgba($color-primary, 0.7);
+$navbar-light-hover-color: rgba($color-primary, 1);
+
+//FONT WEIGHT
+$font-weight-bolder: 600;
+@import "../bootstrap-5.1.3/scss/bootstrap";
+
+.icon-custom {
+  width: 2rem;
+  height: 2rem;
+  fill: $color-primary;
+}

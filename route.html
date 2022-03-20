@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="en">
+    <title>CityScoot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="src/css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!--HEADER-->
+    <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
+    <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
+        <!--LOGO-->
+        <a class="navbar-brand fw-bolder" href="#">
+          <img src="src/img/city-scoot-logo.png" alt="" width="30" height="30" class="d-inline-block align-text-center mb-1" />
+          CityScoot
+        </a>
+
+        <!--HAMBURGER-->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--LINKS-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <!--1-->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle active" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Home </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="routes.html">Routes</a></li>
+                <li><a class="dropdown-item" href="guides.html">Guides</a></li>
+                <li><a class="dropdown-item" href="scooters.html">Scooters</a></li>
+              </ul>
+            </li>
+            <!--2-->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="safety.html">Safety</a>
+            </li>
+          </ul>
+
+          <a class="btn btn-outline-secondary fw-bolder" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!--Inspired from https://getbootstrap.com/docs/5.1/components/breadcrumb//-->
+    <section class="container" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="routes.html">Routes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Route</li>
+      </ol>
+    </section>
+
+    <!--HEADER inspired from https://getbootstrap.com/docs/5.1/components/card/-->
+    <main class="container card mt-3" style="width: 30rem">
+      <img src="src/img/soho-image.jpg" class="card-img-top pt-2" alt="soho image" />
+      <div class="card-body">
+        <h5 class="card-title">Soho</h5>
+        <p class="card-text">Highlights: China Town, Soho Square, Theatre Land, Gay Town, Italian Soho. Golden Square</p>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Day: Saturday</li>
+        <li class="list-group-item">Starts: 9am and Ends:1pm</li>
+        <li class="list-group-item">Guide: Ron Gray</li>
+      </ul>
+
+      <!--Modal inspired from https://getbootstrap.com/docs/5.1/components/modal/-->
+      <div class="card-body">
+        <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal" data-bs-target="#bookTrip">Book now !</button>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="bookTrip" tabindex="-1" aria-labelledby="bookTrip" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Book now a scooter tour!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Follow the following instruction if you want to book the current tour,</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary text-white">Book Now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
+    <footer class="container py-4 pt-5 mt-auto">
+      <hr class="row mb-4" />
+      <div class="row align-item-end">
+        <span class="col-sm-11 col-md-4 nav-link text-muted">&copy; 2022 CityScoot, Inc </span>
+
+        <div class="col-sm-1 col-md-4 py-1">
+          <img src="src/img/city-scoot-logo.png" alt="logo scooter" width="30" height="30" class="ms-sm-0 mx-md-auto d-block" />
+        </div>
+
+        <div class="col-sm-12 col-md-4 d-flex flex-column flex-sm-row">
+          <a href="#" class="nav-link text-muted ps-0">Accessibility </a>
+          <a href="#" class="nav-link text-muted ps-0">Privacy</a>
+          <a href="#" class="nav-link text-muted ps-0">Corporate</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="en">
+    <title>CityScoot</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="src/css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
+        <!--LOGO-->
+        <a class="navbar-brand fw-bolder" href="#">
+          <img src="src/img/city-scoot-logo.png" alt="" width="30" height="30" class="d-inline-block align-text-center mb-1" />
+          CityScoot
+        </a>
+
+        <!--HAMBURGER-->
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--LINKS-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+            <!--1-->
+            <li class="nav-item me-3">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <!--2-->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="safety.html">Safety</a>
+            </li>
+            <!--3-->
+            <li class="nav-item dropdown me-3">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="routes.html">Routes</a></li>
+                <li><a class="dropdown-item" href="guides.html">Guides</a></li>
+                <li><a class="dropdown-item" href="scooters.html">Scooters</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <a class="btn btn-outline-secondary fw-bolder" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Inspired from https://getbootstrap.com/docs/5.1/components/breadcrumb// -->
+    <section class="container" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+      </ol>
+    </section>
+
+    <!--HEADER inspired from https://getbootstrap.com/docs/5.1/examples/heroes/-->
+    <header class="container px-4 py-3 py-md-5">
+      <div class="row flex-lg-row-reverse align-items-center">
+        <!--IMG-->
+        <div class="col-12 col-lg-6">
+          <img src="src/img/city-scoot-banner.jpg" alt="girls riding scooters img" class="d-block mx-auto img-fluid" width="700" height="500" />
+        </div>
+        <!--TEXT-->
+        <div class="col-lg-6">
+          <h1 class="display-1 lh-1 mb-4 mt-3">Scooters for city</h1>
+          <p class="lead">CityScoot offers an eco-friendly, safe and fun way of seeing the sights of London. All tours are led by experienced and knowledgeable guides.</p>
+          <p class="lead d-none d-md-block">We offer tours that take in most of the best-known sites and areas of the city, including Soho, Westminster, Camden Town, Notting Hill, Hampstead Heath, Greenwich and Wapping.</p>
+          <p class="lead d-none d-md-block">We provide reliable safety-tested scooters and helmets.</p>
+        </div>
+      </div>
+    </header>
+
+    <!--GRID LAYOUTideea inspired from https://getbootstrap.com/docs/5.1/examples/features/ personally coded -->
+    <main class="container px-3 py-sm-2 py-md-5">
+      <h2 class="align-self-center display-2 text-center mb-5 pb-2">Features</h2>
+
+      <div class="row gx-5 g-5 mb-3">
+        <!--Routes-->
+        <div class="col-sm-11 col-md-6 d-flex align-items-start">
+          <img class="w-25 bg-light p-2 img rounded me-2" src="src/img/routes-icon.png" alt="route icon" />
+          <div>
+            <p>Routes are designed to take in the highlights of London. They are also designed to optimise safety. Where possible they make use of the city’s extensive cycle superhighways and cycle lanes. Read more.</p>
+            <a href="routes.html" class="link-primary">Read more !</a>
+          </div>
+        </div>
+        <!--Guides-->
+        <div class="col-sm-12 col-md-6 d-flex align-items-start">
+          <img class="w-25 bg-light p-2 rounded me-2" src="src/img/guide-icon.png" alt="guide icon" />
+          <div>
+            <p>Guides subsection Our guides are handpicked for their in-depth knowledge of London and for their ability to communicate that knowledge effectively. They are also trained in road safety, first aid, and basic scooter maintenance.</p>
+            <a href="guides.html" class="link-primary">Read more !</a>
+          </div>
+        </div>
+        <!--Safety-->
+        <div class="col-sm-12 col-md-6 d-flex align-items-start">
+          <img class="w-25 bg-light p-2 rounded me-2" src="src/img/safety-icon.png" alt="safety icon" />
+          <div>
+            <p>
+              Safety subsection CityScoot takes a safety-first approach to its tours. All scooters are safety tested and regularly serviced. High quality safety helmets are provided. Tours are scheduled for low traffic times – typically for Sunday
+              mornings.
+            </p>
+            <a href="safety.html" class="link-primary">Read more !</a>
+          </div>
+        </div>
+        <!--Scooters-->
+        <div class="col-sm-12 col-md-6 d-flex align-items-start">
+          <img class="w-25 bg-light p-2 rounded me-2" src="src/img/scooter-icon.png" alt="scooter icon" />
+          <div>
+            <p>
+              Scooters subsection CityScoot uses the very latest Blast scooters. Reliable, robust and really very nippy about town. These scooters provide a fast, comfortable way of seeing the city without wearing out your shoes or being cooked up on
+              a bus.
+            </p>
+            <a href="scooters.html" class="link-primary">Read more !</a>
+          </div>
+        </div>
+        <!--END ROW-->
+      </div>
+    </main>
+
+    <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
+    <footer class="container py-4 pt-5 mt-auto">
+      <hr class="row mb-4" />
+      <div class="row align-item-end">
+        <span class="col-sm-11 col-md-4 nav-link text-muted">&copy; 2022 CityScoot, Inc </span>
+
+        <div class="col-sm-1 col-md-4 py-1">
+          <img src="src/img/city-scoot-logo.png" alt="logo scooter" width="30" height="30" class="ms-sm-0 mx-md-auto d-block" />
+        </div>
+
+        <div class="col-sm-12 col-md-4 d-flex flex-column flex-sm-row">
+          <a href="#" class="nav-link text-muted ps-0">Accessibility </a>
+          <a href="#" class="nav-link text-muted ps-0">Privacy</a>
+          <a href="#" class="nav-link text-muted ps-0">Corporate</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
