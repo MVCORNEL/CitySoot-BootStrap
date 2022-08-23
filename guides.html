@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head lang="en">
+  <head>
     <title>CityScoot</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -8,9 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+    <script defer src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script type="module" src="src/js/index.js"></script>
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body id="guides" class="d-flex flex-column min-vh-100">
+    <!--STATE-->
+    <div class="bg-primary">
+      <p class="state-text container text-end text-white mb-0">&nbsp;</p>
+    </div>
     <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container">
@@ -34,19 +41,24 @@
             </li>
             <!--2-->
             <li class="nav-item me-3">
-              <a class="nav-link" href="safety.html">Safety</a>
+              <a class="nav-link" href="contact.html">Contact us</a>
             </li>
             <!--3-->
             <li class="nav-item dropdown me-3">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="routes.html">Routes</a></li>
+                <li><a class="dropdown-item" href="safety.html">Safety</a></li>
                 <li><a class="dropdown-item active" href="#">Guides</a></li>
                 <li><a class="dropdown-item" href="scooters.html">Scooters</a></li>
+                <li><a class="dropdown-item" href="routes.html">Routes</a></li>
+                <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
               </ul>
             </li>
           </ul>
-          <a class="btn btn-outline-secondary fw-bolder" href="contact.html">Contact us</a>
+          <div id="btn-nav-container">
+            <a id="btn-nav-login" class="btn btn-outline-secondary fw-bolder" href="login.html">Sign in</a>
+            <button id="btn-nav-logout" class="btn btn-outline-secondary fw-bolder">Log out</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -71,108 +83,7 @@
     </header>
 
     <!--Card group inspired from https://getbootstrap.com/docs/5.1/components/card/#card-groups-->
-    <main class="container">
-      <!--CARD 1-->
-      <div class="row row-cols-1 row-cols-lg-2 g-4">
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="row">
-              <div class="col-10">
-                <div class="card-body">
-                  <strong class="d-inline-block card-text mb-2 text-primary">Harry Hobsbawm</strong>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"
-                    />
-                  </svg>
-                  <h2 class="card-title mb-2">Professional Tour Guide</h2>
-
-                  <small class="d-block card-text text-muted">Age: 42 </small>
-                  <small class="d-block card-text text-muted">Tours: <span class="fst-italic">Camden Town, Hampstead Heath, City of London</span></small>
-                </div>
-              </div>
-
-              <div class="col-2">
-                <img src="src/img/guide-placeholder-image.jpg" class="img-fluid rounded float-end me-2" alt="guide face image" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--CARD 2-->
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="row">
-              <div class="col-10">
-                <div class="card-body">
-                  <strong class="d-inline-block card-text mb-2 text-primary">Celia Miller</strong>
-                  <h2 class="card-title mb-2">Historian and part-time tour guide.</h2>
-
-                  <small class="d-block card-text text-muted">Age: 38 </small>
-                  <small class="d-block card-text text-muted">Tours: <span class="fst-italic">Camden Town, Bloomsbury, Hyde Park</span></small>
-                </div>
-              </div>
-              <div class="col-2">
-                <img src="src/img/guide-placeholder-image.jpg" class="img-fluid rounded float-end me-2" alt="guide face image" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--CARD 3-->
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="row">
-              <div class="col-10">
-                <div class="card-body">
-                  <strong class="d-inline-block card-text mb-2 text-primary">Cynthia Payne</strong>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"
-                    />
-                  </svg>
-                  <h2 class="card-title mb-2">Archivist and part-time tour guide.</h2>
-
-                  <small class="d-block card-text text-muted">Age: 50 </small>
-                  <small class="d-block card-text text-muted">Tours: <span class="fst-italic">Notting Hill, Kensington and Chelsea, Regents Park, Fitzrovia</span></small>
-                </div>
-              </div>
-              <div class="col-2">
-                <img src="src/img/guide-placeholder-image.jpg" class="img-fluid rounded float-end me-2" alt="guide face image" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--CARD 4-->
-        <div class="col">
-          <div class="card h-100 shadow">
-            <div class="row">
-              <div class="col-10">
-                <div class="card-body">
-                  <strong class="d-inline-block card-text mb-2 text-primary">Ron Cray</strong>
-
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935z"
-                    />
-                  </svg>
-
-                  <h2 class="card-title mb-2">Journalist and part-time tour guide</h2>
-
-                  <small class="d-block card-text text-muted">Age: 43 </small>
-                  <small class="d-block card-text text-muted">Tours: <span class="fst-italic">Soho, Covent Garden, Southbank, City of London, Wapping, Greenwich.</span></small>
-                </div>
-              </div>
-
-              <div class="col-2">
-                <img src="src/img/guide-placeholder-image.jpg" class="img-fluid rounded float-end me-2" alt="guide face image" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+    <main class="container"></main>
 
     <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
     <footer class="container py-4 pt-5 mt-auto">

@@ -4,19 +4,16 @@
     <title>CityScoot</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="src/css/custom.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!--POLYFILL-->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!--VALIDATORS-->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+    <!--VALIDATOR-->
     <script defer src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
     <script type="module" src="src/js/index.js"></script>
   </head>
-
-  <body id="route" class="d-flex flex-column min-vh-100">
+  <body id="favorites" class="d-flex flex-column min-vh-100">
     <!--STATE-->
     <div class="bg-primary">
       <p class="state-text container text-end text-white mb-0">&nbsp;</p>
@@ -54,7 +51,7 @@
                 <li><a class="dropdown-item" href="guides.html">Guides</a></li>
                 <li><a class="dropdown-item" href="scooters.html">Scooters</a></li>
                 <li><a class="dropdown-item" href="routes.html">Routes</a></li>
-                <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
+                <li><a class="dropdown-item active" href="#">Favorites</a></li>
               </ul>
             </li>
           </ul>
@@ -67,40 +64,16 @@
     </nav>
 
     <!--Inspired from https://getbootstrap.com/docs/5.1/components/breadcrumb//-->
-    <section class="container pb-0 mb-0" aria-label="breadcrumb">
+    <section class="container" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="routes.html">Routes</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Route</li>
+        <li class="breadcrumb-item">Favorites</li>
       </ol>
     </section>
 
-    <div class="container py-0">
-      <div class="d-flex justify-content-end">
-        <!--FAV BUTTON-->
-        <div class="fav">
-          <a href="favorites.html" class="fav__btn btn fs-4 py-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
-              <path
-                fill-rule="evenodd"
-                d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"
-              />
-            </svg>
-            <span>FAVORITES</span>
-          </a>
-
-          <!--FAV LIST-->
-          <ul id="fav-list" class="fav__list list-group list-group-flush">
-            <li class="list-group-item">Route</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!--https://getbootstrap.com/docs/5.1/examples/jumbotron/-->
-    <main class="container">
-      <div id="map"></div>
-    </main>
+    <!--HEADER inspired from https://getbootstrap.com/docs/5.1/components/card/-->
+    <!--CARDS-->
+    <main class="container"></main>
 
     <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
     <footer class="container py-4 pt-5 mt-auto">
@@ -121,6 +94,5 @@
     </footer>
 
     <script src="src/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAePBjKoMrjH-wOh-tgY5QFLM__rrIaUJE&callback=initMap&v=weekly" defer></script>
   </body>
 </html>

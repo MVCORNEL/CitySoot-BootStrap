@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head lang="en">
+  <head>
     <title>CityScoot</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -8,9 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet" />
+    <!--VALIDATOR-->
+    <script defer src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script type="module" src="src/js/index.js"></script>
   </head>
 
-  <body class="d-flex flex-column min-vh-100">
+  <body id="routes" class="d-flex flex-column min-vh-100">
+    <!--STATE-->
+    <div class="bg-primary">
+      <p class="state-text container text-end text-white mb-0">&nbsp;</p>
+    </div>
     <!--NAVIGATION inspired from https://getbootstrap.com/docs/5.1/components/navs-tabs/-->
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container">
@@ -30,24 +38,28 @@
           <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
             <!--1-->
             <li class="nav-item me-3">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <!--2-->
             <li class="nav-item me-3">
-              <a class="nav-link" href="safety.html">Safety</a>
+              <a class="nav-link" href="contact.html">Contact us</a>
             </li>
             <!--3-->
             <li class="nav-item dropdown me-3">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> More </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item active" href="#">Routes</a></li>
+                <li><a class="dropdown-item" href="safety.html">Safety</a></li>
                 <li><a class="dropdown-item" href="guides.html">Guides</a></li>
                 <li><a class="dropdown-item" href="scooters.html">Scooters</a></li>
+                <li><a class="dropdown-item active" href="#">Routes</a></li>
+                <li><a class="dropdown-item" href="favorites.html">Favorites</a></li>
               </ul>
             </li>
           </ul>
-
-          <a class="btn btn-outline-secondary fw-bolder" href="contact.html">Contact us</a>
+          <div id="btn-nav-container">
+            <a id="btn-nav-login" class="btn btn-outline-secondary fw-bolder" href="login.html">Sign in</a>
+            <button id="btn-nav-logout" class="btn btn-outline-secondary fw-bolder">Log out</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -71,111 +83,8 @@
       <p class="lead d-none d-md-block">There are always short stops for drinks and a longer stop for lunch or dinner. Bookings can be made up to two-hours before the tour starts</p>
     </header>
 
-    <main class="container px-4 px-sm-0 py-md-1">
-      <!--Table inspired from https://getbootstrap.com/docs/5.1/content/tables/-->
-      <table class="table fs-5 table-dark table-bordered table-hover table-striped">
-        <!--TABLE HEADER-->
-        <thead>
-          <tr>
-            <th scope="col">Tour</th>
-            <th scope="col">Day</th>
-            <th scope="col">Start</th>
-            <th scope="col">End</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <!--TABLE BODY-->
-        <tbody>
-          <tr>
-            <td>Camden Town</td>
-            <td>Sunday</td>
-            <td>9am</td>
-            <td>1pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
+    <main class="container px-3 py-sm-2 py-md-5"></main>
 
-          <tr>
-            <td>Regents Park</td>
-            <td>Sunday</td>
-            <td>10am</td>
-            <td>2pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Soho</td>
-            <td>Saturday</td>
-            <td>9am</td>
-            <td>1pm</td>
-            <td><a href="route.html" class="link-primary">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Hampstead Heath</td>
-            <td>Sunday</td>
-            <td>9am</td>
-            <td>1pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Greenwich</td>
-            <td>Sunday</td>
-            <td>9am</td>
-            <td>1pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Hyde Park</td>
-            <td>Saturday</td>
-            <td>10am</td>
-            <td>2pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Southbank</td>
-            <td>Sunday</td>
-            <td>11am</td>
-            <td>3pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Southbank</td>
-            <td>Sunday</td>
-            <td>11am</td>
-            <td>3pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>City of London</td>
-            <td>Sunday</td>
-            <td>11am</td>
-            <td>3pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Wapping</td>
-            <td>Sunday</td>
-            <td>11am</td>
-            <td>3pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-
-          <tr>
-            <td>Bloomsbury</td>
-            <td>Sunday</td>
-            <td>9am</td>
-            <td>1pm</td>
-            <td><a href="#" class="link-primary text-muted">Book Now!</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
     <!--Footer inspired from https://getbootstrap.com/docs/5.1/examples/footers/-->
     <footer class="container py-4 pt-5 mt-auto">
       <hr class="row mb-4" />
